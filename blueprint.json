@@ -1,24 +1,23 @@
-  {
-    "preferredVersions": {                                    
+  {                                                           
+    "preferredVersions": {                           
       "php": "8.2",                                           
       "wp": "latest"                                          
-    },                                                        
+    },
     "login": true,                                            
     "steps": [                                                
       {                                                       
-        "step": "installTheme",                               
+        "step": "installTheme",
         "themeZipFile": {                                     
-          "resource": "wordpress.org/themes",                 
-          "slug": "hello-elementor"                           
-        },                                                    
-        "activate": true                                      
-      },                                                      
-      {                                                       
-        "step": "installPlugin",                              
-        "pluginZipFile": {                                    
-          "resource": "wordpress.org/plugins",                
-          "slug": "elementor"                                 
+          "resource": "wordpress.org/themes",        
+          "slug": "hello-elementor"                     
         }                                                     
-      }                                                       
-    ]                                                       
+      },
+      {
+        "step": "installPlugin",                              
+        "pluginZipFile": {                           
+          "resource": "wordpress.org/plugins",          
+          "slug": "elementor"                                 
+        }
+      }
+    ]
   }
