@@ -1,39 +1,55 @@
-{
-  "preferredVersions": {
-    "php": "8.2",
-    "wp": "latest"
-  },
-  "login": true,
-  "steps": [
-    {
-      "step": "installTheme",
-      "themeZipFile": {
-        "resource": "url",
-        "url": "https://downloads.wordpress.org/theme/hello-elementor.zip"
+ {                                                           
+    "preferredVersions": {                                    
+      "php": "8.2",                                           
+      "wp": "latest"                                          
+    },                                                        
+    "landingPage": "/",                                       
+    "login": true,                                            
+    "steps": [
+      {                                                       
+        "step": "installTheme",
+        "themeZipFile": {
+          "resource": "url",
+          "url":
+  "https://downloads.wordpress.org/theme/hello-elementor.zip" 
+        }
+      },                                                      
+      {           
+        "step": "installTheme",
+        "themeZipFile": {
+          "resource": "url",
+          "url": "https://cdn.jsdelivr.net/gh/sales-source/wp-
+  demo@main/hello-elementor-child.zip"                        
+        }
+      },                                                      
+      {           
+        "step": "installPlugin",
+        "pluginZipFile": {
+          "resource": "url",                                  
+          "url": "https://downloads.wordpress.org/plugin/eleme
+  ntor.latest-stable.zip"                                     
+        }         
+      },
+      {
+        "step": "runWpCliCommand",
+        "command": "language core install ko_KR"
+      },                                                      
+      {
+        "step": "runWpCliCommand",                            
+        "command": "site switch-language ko_KR"
+      },
+      {
+        "step": "runWpCliCommand",
+        "command": "option update elementor_onboarded yes"    
+      },
+      {                                                       
+        "step": "runWpCliCommand",
+        "command": "option update elementor_connect_site_key 
+  dummy"                                                      
+      },
+      {                                                       
+        "step": "runWpCliCommand",
+        "command": "theme activate hello-elementor-child"
       }
-    },
-    {
-      "step": "installPlugin",
-      "pluginZipFile": {
-        "resource": "url",
-        "url": "https://downloads.wordpress.org/plugin/elementor.latest-stable.zip"
-      }
-    },
-    {
-      "step": "runWpCliCommand",
-      "command": "language core install ko_KR"
-    },
-    {
-      "step": "runWpCliCommand",
-      "command": "site switch-language ko_KR"
-    },
-    {
-      "step": "runWpCliCommand",
-      "command": "option update elementor_onboarded yes"
-    },
-    {
-      "step": "runWpCliCommand",
-      "command": "option update elementor_connect_site_key dummy"
-    }
-  ]
-}
+    ]
+  }
