@@ -1,23 +1,25 @@
-  {                                                           
-    "preferredVersions": {                           
-      "php": "8.2",                                           
-      "wp": "latest"                                          
-    },
-    "login": true,                                            
+ {                                                           
+    "preferredVersions": {
+      "php": "8.2",
+      "wp": "latest"
+    },                                                        
+    "login": true,
     "steps": [                                                
-      {                                                       
+      {           
         "step": "installTheme",
-        "themeZipFile": {                                     
-          "resource": "wordpress.org/themes",        
-          "slug": "hello-elementor"                     
+        "themeZipFile": {
+          "resource": "url",
+          "url":                                              
+  "https://downloads.wordpress.org/theme/hello-elementor.zip"
         }                                                     
-      },
+      },          
       {
-        "step": "installPlugin",                              
-        "pluginZipFile": {                           
-          "resource": "wordpress.org/plugins",          
-          "slug": "elementor"                                 
-        }
-      }
+        "step": "installPlugin",
+        "pluginZipFile": {
+          "resource": "url",
+          "url": "https://downloads.wordpress.org/plugin/eleme
+  ntor.latest-stable.zip"
+        }                                                     
+      }           
     ]
   }
