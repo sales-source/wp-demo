@@ -1,4 +1,4 @@
-{                                                           
+  {
     "preferredVersions": {                                    
       "php": "8.2",                                           
       "wp": "latest"                                          
@@ -16,10 +16,9 @@
       {                                                       
         "step": "installPlugin",                              
         "pluginZipFile": {                                    
-          "resource": "wordpress.org/plugins",
+          "resource": "wordpress.org/plugins",                
           "slug": "elementor"                                 
-        },                                                  
-        "activate": true
-      }
-    ]
+        }                                                     
+      }                                                       
+    ]                                                       
   }
