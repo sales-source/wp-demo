@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WordPress 체험판 · 테라클래스</title>
-  <link rel="icon" href="favicon.png">
+  <link rel="icon" href="logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
@@ -238,7 +239,7 @@
 
   <!-- 로딩 화면 -->
   <div id="loading">
-    <img class="logo" src="favicon.png" alt="테라클래스">
+    <img class="logo" src="logo.png" alt="테라클래스">
     <div class="loading-title">WordPress 체험판 준비 중</div>
     <div class="loading-sub">잠시만 기다려주세요. 약 1분 정도 소요됩니다.</div>
     <div class="bar-wrap"><div class="bar-fill"></div></div>
@@ -274,7 +275,7 @@
   <div id="expiry">
     <div class="expiry-card">
       <div class="expiry-badge">
-        <img src="favicon.png" alt="테라클래스">
+        <img src="logo.png" alt="테라클래스">
       </div>
       <div class="expiry-title">체험 시간이 종료되었습니다</div>
       <div class="expiry-desc">
@@ -299,9 +300,20 @@
     const frame    = document.getElementById('frame');
 
     // 로딩 완료 감지
+    // Elementor 설치에 약 70초 소요 → 최소 75초 유지 후 iframe load 확인
+    const MIN_LOADING_MS = 75000;
+    const loadStart = Date.now();
+    let iframeLoaded = false;
+
     frame.addEventListener('load', () => {
-      setTimeout(hideLoading, 4000); // iframe load 후 4초 여유
+      iframeLoaded = true;
+      const elapsed = Date.now() - loadStart;
+      const wait = Math.max(0, MIN_LOADING_MS - elapsed);
+      setTimeout(hideLoading, wait);
     });
+
+    // 안전망: 90초 후에도 안 사라지면 강제로 숨김
+    setTimeout(() => { if (!iframeLoaded) hideLoading(); }, 90000);
 
     function hideLoading() {
       loading.classList.add('fade-out');
