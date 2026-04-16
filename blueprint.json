@@ -1,6 +1,2 @@
-  {"preferredVersions":{"php":"8.2","wp":"latest"},"login":tru
-  e,"steps":[{"step":"installTheme","themeZipFile":{"resource"
-  :"url","url":"https://downloads.wordpress.org/theme/hello-el
-  ementor.zip"}},{"step":"installPlugin","pluginZipFile":{"res
-  ource":"url","url":"https://downloads.wordpress.org/plugin/e
+  {"preferredVersions":{"php":"8.2","wp":"latest"},"login":true,"steps":[{"step":"installTheme","themeZipFile":{"resource":"url","url":"https://downloads.wordpress.org/theme/hello-elementor.zip"}},{"step":"installPlugin","pluginZipFile":{"resource":"url","url":"https://downloads.wordpress.org/plugin/e
   lementor.latest-stable.zip"}}]}
