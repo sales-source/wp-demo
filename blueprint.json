@@ -17,8 +17,7 @@
         "step": "installPlugin",                              
         "pluginZipFile": {
           "resource": "url",
-          "url": "https://downloads.wordpress.org/plugin/eleme
-  ntor.latest-stable.zip"                                     
+          "url": "https://downloads.wordpress.org/plugin/elementor.latest-stable.zip"                                     
         }
       }                                                       
     ]             
