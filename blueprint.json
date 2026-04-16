@@ -42,8 +42,7 @@
       },
       {                                                       
         "step": "runWpCliCommand",
-        "command": "option update elementor_connect_site_key 
-  dummy"                                                      
+        "command": "option update elementor_connect_site_key dummy"                                                      
       },
       {                                                       
         "step": "runWpCliCommand",
