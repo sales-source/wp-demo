@@ -18,7 +18,7 @@
         "step": "installTheme",
         "themeZipFile": {
           "resource": "url",
-          "url": "https://cdn.jsdelivr.net/gh/sales-source/wp-demo@main/hello-elementor-child.zip"                        
+          "url": "https://raw.githubusercontent.com/sales-source/wp-demo/main/hello-elementor-child.zip"                        
         }
       },                                                      
       {           
