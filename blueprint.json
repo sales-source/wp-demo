@@ -1,0 +1,25 @@
+{                                                           
+    "preferredVersions": {                                    
+      "php": "8.2",                                           
+      "wp": "latest"                                          
+    },                                                        
+    "login": true,                                            
+    "steps": [                                                
+      {                                                       
+        "step": "installTheme",                               
+        "themeZipFile": {                                     
+          "resource": "wordpress.org/themes",                 
+          "slug": "hello-elementor"                           
+        },                                                    
+        "activate": true                                      
+      },                                                      
+      {                                                       
+        "step": "installPlugin",                              
+        "pluginZipFile": {                                    
+          "resource": "wordpress.org/plugins",
+          "slug": "elementor"                                 
+        },                                                  
+        "activate": true
+      }
+    ]
+  }
